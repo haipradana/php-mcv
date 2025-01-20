@@ -1,0 +1,5 @@
+<?php
+
+// dua kelas utama pembentuk MVC
+require_once 'core/App.php';
+require_once 'core/Controller.php';
