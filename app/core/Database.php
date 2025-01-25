@@ -51,9 +51,13 @@ class Database {
         $this->stmt->bindValue($param, $value, $type);
     }
 
-    public function execute()
-    {
-        return $this->stmt->execute();
+    public function execute() {
+        try {
+            return $this->stmt->execute();
+        } catch(PDOException $e) {
+            error_log($e->getMessage());
+            return false;
+        }
     }
 
     public function resultSet()

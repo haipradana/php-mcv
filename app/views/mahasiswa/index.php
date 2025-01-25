@@ -58,7 +58,7 @@
 
       <!-- Modal body -->
       <div class="modal-body">
-        <form action="<?= BASEURL; ?>/mahasiswa/tambah" method="post">
+        <form action="<?= BASEURL; ?>/mahasiswa/tambah" method="POST">
             <input type="hidden" name="id" id="id">
             <div class="mb-3 mt-2">
                 <label for="nama" class="form-label">Nama:</label>
@@ -90,7 +90,7 @@
       <!-- Modal footer -->
       <div class="modal-footer">
         <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Tambah</button>
+        <button type="submit" class="btn btn-primary">Tambah</button>
         </form>
       </div>
 

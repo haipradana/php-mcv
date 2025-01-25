@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="<?= BASEURL; ?> /css/bootstrap.css">
 </head>
 <body>
-
+<script>
+        const baseurl = '<?= BASEURL; ?>';
+  </script>
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container">
             <a class="navbar-brand" href="<?=BASEURL;?>">PHPMVC</a>

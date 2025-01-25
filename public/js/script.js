@@ -1,9 +1,26 @@
 $(function(){
 
-    $('.tombolTambahData').on('click', function(){
+    // $('.tombolTambahData').on('click', function(){
+    //     $('#formModalLabel').html('Tambah Data Mahasiswa');
+    //     $('.modal-footer button[type=submit]').html('Tambah Data');
+    //     $('.modal-body form').attr('action', 'http://localhost/phpmvc/public/mahasiswa/tambah');
+    //             // Reset form fields
+    //     $('#nama').val('');
+    //     $('#nim').val('');
+    //     $('#email').val('');
+    //     $('#prodi').val('');
+    //     $('#id').val('');
+    // });
+
+    $('.tombolTambahData').on('click', function() {
         $('#formModalLabel').html('Tambah Data Mahasiswa');
         $('.modal-footer button[type=submit]').html('Tambah Data');
-        $('.modal-body form').attr('action', 'http://localhost/phpmvc/public/mahasiswa/edit');
+        $(".modal-body form").attr("action", `${baseurl}/mahasiswa/tambah`);
+        $('#nama').val('');
+        $('#nrp').val('');
+        $('#email').val('');
+        $('#jurusan').val('');
+        $('#id').val('');
     });
 
     $('.tampilModalEdit').on('click', function(){
