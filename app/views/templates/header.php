@@ -26,6 +26,23 @@
                         <a class="nav-link" href="<?=BASEURL;?>/about">About</a>
                     </li>
                 </ul>
+                <ul class="navbar-nav ms-auto">
+                    <?php if(isset($_SESSION['user'])): ?>
+                        <li class="nav-item">
+                            <span class="nav-link">Hello, <?= $_SESSION['user']['username'];?></span>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?=BASEURL;?>/auth/logout">Logout</a>
+                        </li>
+                        <?php else: ?>
+                            <li class="nav-item">
+                                <a class="nav-link" href="<?= BASEURL; ?>/auth/login">Login</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="<?= BASEURL; ?>/auth/register">Register</a>
+                            </li>
+                        <?php endif; ?>
+                </ul>
             </div>
     </div>
 </nav>
