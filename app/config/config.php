@@ -1,6 +1,7 @@
 <?php
 
 define("BASEURL","http://localhost/phpmvc/public");
+define("BASEURL2","http://localhost/phpmvc/app");
 
 //DB
 

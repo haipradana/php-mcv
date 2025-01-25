@@ -1,6 +1,14 @@
 <?php
 
 class Mahasiswa extends Controller{
+    public function __construct(){
+        if (!isset($_SESSION['user'])) {
+            Flasher::setFlash('Anda harus', 'login terlebih dahulu', 'danger');
+            header('Location: ' . BASEURL . '/auth/login');
+            exit;
+        }
+    }
+
     public function index()
     {
         $data['judul'] = "Daftar Mahasiswa";
@@ -20,6 +28,7 @@ class Mahasiswa extends Controller{
 
     public function tambah()
     {
+        isLoggedIn();
         if ($this->model('Mahasiswa_model')->tambahDataMahasiswa($_POST) > 0) {
             Flasher::setFlash('berhasil','ditambahkan', 'success');
             header('Location: ' . BASEURL . '/mahasiswa');
